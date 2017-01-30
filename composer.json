@@ -6,8 +6,8 @@
     "keywords": [
         "Request",
         "HTTP methods",
-        " GET",
-        " POST",
+        "GET",
+        "POST",
         "PUT",
         "DELETE",
         "AJAX",
