@@ -1,13 +1,13 @@
 {
     "name":        "josantonius/request",
-    "version":     "1.0.0",
+    "version":     "1.1.0",
     "type":        "library",
     "description": "PHP library for handling requests.",
     "keywords": [
         "Request",
         "HTTP methods",
-        " GET",
-        " POST",
+        "GET",
+        "POST",
         "PUT",
         "DELETE",
         "AJAX",
@@ -25,7 +25,7 @@
     "minimum-stability": "dev",
     "prefer-stable" : true,
     "require": {
-        "php" : ">=7.0"
+        "php" : ">=5.6"
     },
     "autoload": {
         "psr-4": {

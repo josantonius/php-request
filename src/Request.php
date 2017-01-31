@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 /**
  * PHP library for handling requests.
  * 
@@ -8,9 +8,9 @@
  * @author     Josantonius - info@josantonius.com
  * @copyright  Copyright (c) 2017 JST PHP Framework
  * @license    https://opensource.org/licenses/MIT - The MIT License (MIT)
- * @version    1.0.0
+ * @version    1.1.0
  * @link       https://github.com/Josantonius/PHP-Request
- * @since      File available since 1.0.0 - Update: 2017-01-17
+ * @since      File available since 1.0.0 - Update: 2017-01-30
  */
 
 namespace Josantonius\Request;
@@ -33,9 +33,14 @@ class Request {
      *
      * @return mixed
      */
-    public static function get(string $key = null) {
+    public static function get($key = null) {
 
-        return $_GET[$key] ?? $_GET ?? null;
+        if (isset($_GET[$key]))
+
+            return $_GET[$key];
+        }
+
+        return (isset($_GET)) ? $_GET : null;
     }
 
     /**
@@ -47,9 +52,14 @@ class Request {
      *
      * @return mixed
      */
-    public static function post(string $key = null) {
+    public static function post($key = null) {
 
-        return $_POST[$key] ?? $_POST ?? null;
+        if (isset($_POST[$key]))
+
+            return $_POST[$key];
+        }
+
+        return (isset($_POST)) ? $_POST : null;
     }
 
     /**
@@ -61,9 +71,14 @@ class Request {
      *
      * @return mixed
      */
-    public static function files(string $key = null) {
+    public static function files($key = null) {
 
-        return $_FILES[$key] ?? $_FILES ?? null;        
+        if (isset($_FILES[$key]))
+
+            return $_FILES[$key];
+        }
+
+        return (isset($_FILES)) ? $_FILES : null;     
     }
 
     /**
@@ -75,11 +90,16 @@ class Request {
      *
      * @return mixed
      */
-    public static function put(string $key = null) {
+    public static function put($key = null) {
 
         parse_str(file_get_contents("php://input"), $_PUT);
 
-        return $_PUT[$key] ?? $_PUT ?? null;
+        if (isset($_PUT[$key]))
+
+            return $_PUT[$key];
+        }
+
+        return (isset($_PUT)) ? $_PUT : null;
     }
 
     /**
@@ -91,11 +111,11 @@ class Request {
      *
      * @return mixed
      */
-    public static function del(string $key) {
+    public static function del($key) {
 
         parse_str(file_get_contents("php://input"), $_DEL);
 
-        return $_DEL[$key] ?? null;
+        return (isset($_DEL[$key])) ? $_DEL[$key] : null;
     }
     
     /**
