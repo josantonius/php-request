@@ -11,8 +11,6 @@
 
 namespace Josantonius\Request;
 
-# use Josantonius\Request\Exception\RequestException;
-
 /**
  * Request handler.
  *
@@ -88,7 +86,7 @@ class Request {
      */
     public static function put($key = null) {
 
-        parse_str(file_get_contents("php://input"), $_PUT);
+        parse_str(file_get_contents('php://input'), $_PUT);
 
         if (isset($_PUT[$key]))
 
@@ -109,7 +107,7 @@ class Request {
      */
     public static function del($key) {
 
-        parse_str(file_get_contents("php://input"), $_DEL);
+        parse_str(file_get_contents('php://input'), $_DEL);
 
         return (isset($_DEL[$key])) ? $_DEL[$key] : null;
     }
@@ -123,7 +121,7 @@ class Request {
      */
     public static function isGet() {
 
-        return $_SERVER["REQUEST_METHOD"] === "GET";
+        return $_SERVER['REQUEST_METHOD'] === 'GET';
     }
 
     /**
@@ -135,7 +133,7 @@ class Request {
      */
     public static function isPost() {
 
-        return $_SERVER["REQUEST_METHOD"] === "POST";
+        return $_SERVER['REQUEST_METHOD'] === 'POST';
     }
 
     
@@ -148,7 +146,7 @@ class Request {
      */
     public static function isPut() {
 
-        return $_SERVER["REQUEST_METHOD"] === "PUT";
+        return $_SERVER['REQUEST_METHOD'] === 'PUT';
     }
     
     /**
@@ -160,7 +158,7 @@ class Request {
      */
     public static function isDelete() {
 
-        return $_SERVER["REQUEST_METHOD"] === "DELETE";
+        return $_SERVER['REQUEST_METHOD'] === 'DELETE';
     }
 
     /**
