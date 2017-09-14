@@ -105,3 +105,4 @@
 * Added `Josantonius\Request\Tests\RequestTest::testIsPut()` method.
 * Added `Josantonius\Request\Tests\RequestTest::testIsDelete()` method.
 * Added `Josantonius\Request\Tests\RequestTest::testIsAjax()` method.
+

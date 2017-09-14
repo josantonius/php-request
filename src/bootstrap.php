@@ -26,4 +26,4 @@ if ((!$loader = includeIfExists(__DIR__ . '/../vendor/autoload.php')) &&
         PHP_EOL . 'php composer.phar install' . PHP_EOL . PHP_EOL);
 }
 
-return $loader;
+return $loader; 
