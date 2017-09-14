@@ -1,6 +1,6 @@
 # PHP Request library
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/request/v/stable)](https://packagist.org/packages/josantonius/request) [![Total Downloads](https://poser.pugx.org/josantonius/request/downloads)](https://packagist.org/packages/josantonius/request) [![Latest Unstable Version](https://poser.pugx.org/josantonius/request/v/unstable)](https://packagist.org/packages/josantonius/request) [![License](https://poser.pugx.org/josantonius/request/license)](https://packagist.org/packages/josantonius/request)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/request/v/stable)](https://packagist.org/packages/josantonius/request) [![Total Downloads](https://poser.pugx.org/josantonius/request/downloads)](https://packagist.org/packages/josantonius/request) [![Latest Unstable Version](https://poser.pugx.org/josantonius/request/v/unstable)](https://packagist.org/packages/josantonius/request) [![License](https://poser.pugx.org/josantonius/request/license)](https://packagist.org/packages/josantonius/request) [![Travis](https://travis-ci.org/Josantonius/PHP-Request.svg)](https://travis-ci.org/Josantonius/PHP-Request)
 
 [Spanish version](README-ES.md)
 
@@ -18,16 +18,6 @@ Biblioteca PHP para manejo de peticiones.
 - [Repositorio](#repositorio)
 - [Licencia](#licencia)
 - [Copyright](#copyright)
-
----
-
-<p align="center"><strong>Echa un vistazo al código</strong></p>
-
-<p align="center">
-  <a href="https://youtu.be/SfdIFFRywY4" title="Echa un vistazo al código">
-  	<img src="https://raw.githubusercontent.com/Josantonius/PHP-Algorithm/master/resources/youtube-thumbnail.jpg">
-  </a>
-</p>
 
 ---
 
@@ -94,35 +84,13 @@ if (Request::isPost()) {
 
 ### Tests 
 
-Para utilizar la clase de [pruebas](tests), simplemente:
+Para ejecutar las [pruebas](tests/Request/Test) simplemente:
 
-```php
-<?php
-$loader = require __DIR__ . '/vendor/autoload.php';
+    $ git clone https://github.com/Josantonius/PHP-Request.git
+    
+    $ cd PHP-Request
 
-$loader->addPsr4('Josantonius\\Request\\Tests\\', __DIR__ . '/vendor/josantonius/request/tests');
-
-use Josantonius\Request\Tests\RequestTest;
-```
-Métodos de prueba disponibles en esta biblioteca:
-
-```php
-RequestTest::testGet();
-RequestTest::testGetSpecificKey();
-RequestTest::testPost();
-RequestTest::testPostSpecificKey();
-RequestTest::testFiles();
-RequestTest::testFilesSpecificKey();
-RequestTest::testPut();
-RequestTest::testPutSpecificKey();
-RequestTest::testDel();
-RequestTest::testDelSpecificKey();
-RequestTest::testIsGet();
-RequestTest::testIsPost();
-RequestTest::testIsPut();
-RequestTest::testIsDelete();
-RequestTest::testIsAjax();
-```
+    $ phpunit
 
 ### Contribuir
 1. Comprobar si hay incidencias abiertas o abrir una nueva para iniciar una discusión en torno a un fallo o función.

@@ -1,6 +1,6 @@
 # PHP Request library
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/request/v/stable)](https://packagist.org/packages/josantonius/request) [![Total Downloads](https://poser.pugx.org/josantonius/request/downloads)](https://packagist.org/packages/josantonius/request) [![Latest Unstable Version](https://poser.pugx.org/josantonius/request/v/unstable)](https://packagist.org/packages/josantonius/request) [![License](https://poser.pugx.org/josantonius/request/license)](https://packagist.org/packages/josantonius/request)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/request/v/stable)](https://packagist.org/packages/josantonius/request) [![Total Downloads](https://poser.pugx.org/josantonius/request/downloads)](https://packagist.org/packages/josantonius/request) [![Latest Unstable Version](https://poser.pugx.org/josantonius/request/v/unstable)](https://packagist.org/packages/josantonius/request) [![License](https://poser.pugx.org/josantonius/request/license)](https://packagist.org/packages/josantonius/request) [![Travis](https://travis-ci.org/Josantonius/PHP-Request.svg)](https://travis-ci.org/Josantonius/PHP-Request)
 
 [Spanish version](README-ES.md)
 
@@ -18,16 +18,6 @@ PHP library for handling requests.
 - [Repository](#repository)
 - [License](#license)
 - [Copyright](#copyright)
-
----
-
-<p align="center"><strong>Take a look at the code</strong></p>
-
-<p align="center">
-  <a href="https://youtu.be/SfdIFFRywY4" title="Take a look at the code">
-  	<img src="https://raw.githubusercontent.com/Josantonius/PHP-Algorithm/master/resources/youtube-thumbnail.jpg">
-  </a>
-</p>
 
 ---
 
@@ -94,36 +84,13 @@ if (Request::isPost()) {
 
 ### Tests 
 
-To use the [test](tests) class, simply:
+To run [tests](tests/Request/Test) simply:
 
-```php
-<?php
-$loader = require __DIR__ . '/vendor/autoload.php';
+    $ git clone https://github.com/Josantonius/PHP-Request.git
+    
+    $ cd PHP-Request
 
-$loader->addPsr4('Josantonius\\Request\\Tests\\', __DIR__ . '/vendor/josantonius/request/tests');
-
-use Josantonius\Request\Tests\RequestTest;
-
-```
-Available test methods in this library:
-
-```php
-RequestTest::testGet();
-RequestTest::testGetSpecificKey();
-RequestTest::testPost();
-RequestTest::testPostSpecificKey();
-RequestTest::testFiles();
-RequestTest::testFilesSpecificKey();
-RequestTest::testPut();
-RequestTest::testPutSpecificKey();
-RequestTest::testDel();
-RequestTest::testDelSpecificKey();
-RequestTest::testIsGet();
-RequestTest::testIsPost();
-RequestTest::testIsPut();
-RequestTest::testIsDelete();
-RequestTest::testIsAjax();
-```
+    $ phpunit
 
 ### Contribute
 1. Check for open issues or open a new issue to start a discussion around a bug or feature.
