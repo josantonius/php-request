@@ -14,6 +14,7 @@ PHP library for handling requests.
 - [Available Methods](#available-methods)
 - [Usage](#usage)
 - [Tests](#tests)
+- [TODO](#-todo)
 - [Contribute](#contribute)
 - [Repository](#repository)
 - [License](#license)
@@ -92,7 +93,15 @@ To run [tests](tests/Request/Test) simply:
 
     $ phpunit
 
+### ☑ TODO
+
+- [x] Create tests
+- [ ] Improve documentation
+- [ ] Complete tests for PUT
+- [ ] Complete tests for DEL
+
 ### Contribute
+
 1. Check for open issues or open a new issue to start a discussion around a bug or feature.
 1. Fork the repository on GitHub to start making your changes.
 1. Write one or more tests for the new feature or that expose the bug.

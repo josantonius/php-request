@@ -14,6 +14,7 @@ Biblioteca PHP para manejo de peticiones.
 - [Métodos disponibles](#métodos-disponibles)
 - [Uso](#uso)
 - [Tests](#tests)
+- [Tareas pendientes](#-tareas-pendientes)
 - [Contribuir](#contribuir)
 - [Repositorio](#repositorio)
 - [Licencia](#licencia)
@@ -92,7 +93,15 @@ Para ejecutar las [pruebas](tests/Request/Test) simplemente:
 
     $ phpunit
 
+### ☑ Tareas pendientes
+
+- [x] Completar tests
+- [ ] Mejorar la documentación
+- [ ] Completar tests para PUT
+- [ ] Completar tests para DEL
+
 ### Contribuir
+
 1. Comprobar si hay incidencias abiertas o abrir una nueva para iniciar una discusión en torno a un fallo o función.
 1. Bifurca la rama del repositorio en GitHub para iniciar la operación de ajuste.
 1. Escribe una o más pruebas para la nueva característica o expón el error.
