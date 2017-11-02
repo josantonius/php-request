@@ -1,17 +1,17 @@
 # PHP Request library
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/request/v/stable)](https://packagist.org/packages/josantonius/request) [![Total Downloads](https://poser.pugx.org/josantonius/request/downloads)](https://packagist.org/packages/josantonius/request) [![Latest Unstable Version](https://poser.pugx.org/josantonius/request/v/unstable)](https://packagist.org/packages/josantonius/request) [![License](https://poser.pugx.org/josantonius/request/license)](https://packagist.org/packages/josantonius/request) [![Travis](https://travis-ci.org/Josantonius/PHP-Request.svg)](https://travis-ci.org/Josantonius/PHP-Request)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/Request/v/stable)](https://packagist.org/packages/josantonius/Request) [![Latest Unstable Version](https://poser.pugx.org/josantonius/Request/v/unstable)](https://packagist.org/packages/josantonius/Request) [![License](https://poser.pugx.org/josantonius/Request/license)](LICENSE) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/aa5b98dbbc5846399bb994318dce3c88)](https://www.codacy.com/app/Josantonius/PHP-Request?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Josantonius/PHP-Request&amp;utm_campaign=Badge_Grade) [![Total Downloads](https://poser.pugx.org/josantonius/Request/downloads)](https://packagist.org/packages/josantonius/Request) [![Travis](https://travis-ci.org/Josantonius/PHP-Request.svg)](https://travis-ci.org/Josantonius/PHP-Request) [![PSR2](https://img.shields.io/badge/PSR-2-1abc9c.svg)](http://www.php-fig.org/psr/psr-2/) [![PSR4](https://img.shields.io/badge/PSR-4-9b59b6.svg)](http://www.php-fig.org/psr/psr-4/) [![CodeCov](https://codecov.io/gh/Josantonius/PHP-Request/branch/master/graph/badge.svg)](https://codecov.io/gh/Josantonius/PHP-Request)
 
-[Spanish version](README-ES.md) 
+[English version](README.md) 
 
 Biblioteca PHP para manejo de peticiones.
 
 ---
 
-- [Instalación](#instalación)
 - [Requisitos](#requisitos)
-- [Cómo empezar y ejemplos](#cómo-empezar-y-ejemplos)
+- [Instalación](#instalación)
 - [Métodos disponibles](#métodos-disponibles)
+- [Cómo empezar](#cómo-empezar)
 - [Uso](#uso)
 - [Tests](#tests)
 - [Tareas pendientes](#-tareas-pendientes)
@@ -22,85 +22,284 @@ Biblioteca PHP para manejo de peticiones.
 
 ---
 
-### Instalación 
+## Requisitos
 
-La mejor forma de instalar esta extensión es a través de [composer](http://getcomposer.org/download/).
+Esta clase es soportada por versiones de **PHP 5.6** o superiores y es compatible con versiones de **HHVM 3.0** o superiores.
 
-Para instalar PHP Request library, simplemente escribe:
+## Instalación 
+
+La mejor forma de instalar esta extensión es a través de [Composer](http://getcomposer.org/download/).
+
+Para instalar **PHP Request library**, simplemente escribe:
 
     $ composer require Josantonius/Request
 
-El comando anterior sólo instalará los archivos necesarios, si prefieres descargar todo el código fuente (incluyendo tests, directorio vendor, excepciones no utilizadas, documentos...) puedes utilizar:
+El comando anterior sólo instalará los archivos necesarios, si prefieres **descargar todo el código fuente** puedes utilizar:
 
     $ composer require Josantonius/Request --prefer-source
 
-También puedes clonar el repositorio completo con Git:
+También puedes **clonar el repositorio** completo con Git:
 
-	$ git clone https://github.com/Josantonius/PHP-Request.git
+  $ git clone https://github.com/Josantonius/PHP-Request.git
 
-### Requisitos
+O **instalarlo manualmente**:
 
-Esta biblioteca es soportada por versiones de PHP 5.6 o superiores y es compatible con versiones de HHVM 3.0 o superiores.
+[Descargar Request.php](https://raw.githubusercontent.com/Josantonius/PHP-Request/master/src/Request.php):
 
-### Cómo empezar y ejemplos
+    $ wget https://raw.githubusercontent.com/Josantonius/PHP-Request/master/src/Request.php
 
-Para utilizar esta biblioteca, simplemente:
-
-```php
-require __DIR__ . '/vendor/autoload.php';
-
-use Josantonius\Request\Request;
-```
-### Métodos disponibles
+## Métodos disponibles
 
 Métodos disponibles en esta biblioteca:
 
+### - Acceso seguro a parámetros GET:
+
 ```php
-Request::get();
-Request::post();
-Request::files();
-Request::put();
-Request::del();
+Request::get($key);
+```
+
+| Atributo | Descripción | Tipo | Requerido | Predeterminado
+| --- | --- | --- | --- | --- |
+| $key | Clave para parámetro. | string | Sí | |
+
+**# Return** (mixed|null) → valor/es o null
+
+### - Acceso seguro a parámetros POST:
+
+```php
+Request::post($key);
+```
+
+| Atributo | Descripción | Tipo | Requerido | Predeterminado
+| --- | --- | --- | --- | --- |
+| $key | Clave para parámetro. | string | Sí | |
+
+**# Return** (mixed|null) → valor/es o null
+
+### - Acceso seguro a parámetros FILES:
+
+```php
+Request::files($key);
+```
+
+| Atributo | Descripción | Tipo | Requerido | Predeterminado
+| --- | --- | --- | --- | --- |
+| $key | Clave para parámetro. | string | Sí | |
+
+**# Return** (mixed|null) → valor/es o null
+
+### - Acceso seguro a parámetros PUT:
+
+```php
+Request::put($key);
+```
+
+| Atributo | Descripción | Tipo | Requerido | Predeterminado
+| --- | --- | --- | --- | --- |
+| $key | Clave para parámetro. | string | Sí | |
+
+**# Return** (mixed|null) → valor/es o null
+
+### - Acceso seguro a parámetros DEL:
+
+```php
+Request::del($key);
+```
+
+| Atributo | Descripción | Tipo | Requerido | Predeterminado
+| --- | --- | --- | --- | --- |
+| $key | Clave para parámetro. | string | Sí | |
+
+**# Return** (mixed|null) → valor/es o null
+
+### - Comprobar si es una petición GET:
+
+```php
 Request::isGet();
+```
+
+**# Return** (boolean)
+
+### - Comprobar si es una petición POST:
+
+```php
 Request::isPost();
+```
+
+**# Return** (boolean)
+
+### - Comprobar si es una petición PUT:
+
+```php
 Request::isPut();
+```
+
+**# Return** (boolean)
+
+### - Comprobar si es una petición DELETE:
+
+```php
 Request::isDelete();
+```
+
+**# Return** (boolean)
+
+### - Comprobar si es una petición AJAX:
+
+```php
 Request::isAjax();
 ```
-### Uso
 
-Ejemplo de uso para esta biblioteca:
+**# Return** (boolean)
+
+## Cómo empezar
+
+Para utilizar esta biblioteca con **Composer**:
 
 ```php
-<?php
 require __DIR__ . '/vendor/autoload.php';
 
 use Josantonius\Request\Request;
-
-if (Request::isPost()) {
-
-    $name = Request::post('name');
-}
 ```
 
-### Tests 
+Si la instalaste **manualmente**, utiliza:
 
-Para ejecutar las [pruebas](tests/Request/Test) simplemente:
+```php
+require_once __DIR__ . '/Request.php';
+
+use Josantonius\Request\Request;
+```
+
+## Uso
+
+Ejemplo de uso para esta biblioteca:
+
+### - Obtener todos los valores GET:
+
+```php
+$_GET = ['test' => 'value', 'test-2' => 1];
+
+Request::get();
+```
+
+### - Acceder al parámetro GET indicando clave específica:
+
+```php
+$_GET = ['test' => 'value', 'test-2' => 1];
+
+Request::get('test');
+```
+
+### - Obtener todos los valores POST:
+
+```php
+$_POST = ['test' => 'value', 'test-2' => 1];
+
+Request::post();
+```
+
+### - Acceder al parámetro POST indicando clave específica:
+
+```php
+$_POST = ['test' => 'value', 'test-2' => 1];
+
+Request::post('test');
+```
+
+### - Obtener todos los valores FILES:
+
+```php
+$_FILES = ['test' => 'value', 'test-2' => 1];
+
+Request::files();
+```
+
+### - Acceder al parámetro FILES indicando clave específica:
+
+```php
+$_FILES = ['test' => 'value', 'test-2' => 1];
+
+Request::files('test');
+```
+
+### - Obtener todos los valores PUT:
+
+```php
+$_PUT = ['test' => 'value', 'test-2' => 1];
+
+Request::put();
+```
+
+### - Acceder al parámetro PUT indicando clave específica:
+
+```php
+$_PUT = ['test' => 'value', 'test-2' => 1];
+
+Request::put('test');
+```
+
+### - Comprobar si es una petición POST:
+
+```php
+$_SERVER['REQUEST_METHOD'] = 'POST';
+
+Request::isPost()
+```
+
+### - Comprobar si es una petición PUT:
+
+```php
+$_SERVER['REQUEST_METHOD'] = 'PUT';
+
+Request::isPut()
+```
+
+### - Comprobar si es una petición DELETE:
+
+```php
+$_SERVER['REQUEST_METHOD'] = 'DELETE';
+
+Request::isDelete()
+```
+
+### - Comprobar si es una petición AJAX:
+
+```php
+$_SERVER['HTTP_X_REQUESTED_WITH'] = 'xmlhttprequest';
+
+Request::isAjax()
+```
+
+## Tests 
+
+Para ejecutar las [pruebas](tests) necesitarás [Composer](http://getcomposer.org/download/) y seguir los siguientes pasos:
 
     $ git clone https://github.com/Josantonius/PHP-Request.git
     
     $ cd PHP-Request
 
-    $ phpunit
+    $ composer install
 
-### ☑ Tareas pendientes
+Ejecutar pruebas unitarias con [PHPUnit](https://phpunit.de/):
+
+    $ composer phpunit
+
+Ejecutar pruebas de estándares de código [PSR2](http://www.php-fig.org/psr/psr-2/) con [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer):
+
+    $ composer phpcs
+
+Ejecutar todas las pruebas anteriores:
+
+    $ composer tests
+
+## ☑ Tareas pendientes
 
 - [x] Completar tests
-- [ ] Mejorar la documentación
+- [x] Mejorar la documentación
 - [ ] Completar tests para PUT
 - [ ] Completar tests para DEL
 
-### Contribuir
+## Contribuir
 
 1. Comprobar si hay incidencias abiertas o abrir una nueva para iniciar una discusión en torno a un fallo o función.
 1. Bifurca la rama del repositorio en GitHub para iniciar la operación de ajuste.
@@ -110,15 +309,15 @@ Para ejecutar las [pruebas](tests/Request/Test) simplemente:
 
 Esto está pensado para proyectos grandes y de larga duración.
 
-### Repositorio
+## Repositorio
 
 Los archivos de este repositorio se crearon y subieron automáticamente con [Reposgit Creator](https://github.com/Josantonius/BASH-Reposgit).
 
-### Licencia
+## Licencia
 
 Este proyecto está licenciado bajo **licencia MIT**. Consulta el archivo [LICENSE](LICENSE) para más información.
 
-### Copyright
+## Copyright
 
 2017 Josantonius, [josantonius.com](https://josantonius.com/)
 
