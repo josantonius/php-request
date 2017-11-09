@@ -8,7 +8,6 @@
  * @link      https://github.com/Josantonius/PHP-Request
  * @since     1.0.0
  */
-
 namespace Josantonius\Request;
 
 /**
@@ -33,7 +32,7 @@ class Request
             return $_GET[$key];
         }
 
-        return (!$key && isset($_GET)) ? $_GET : null;
+        return (! $key && isset($_GET)) ? $_GET : null;
     }
 
     /**
@@ -51,7 +50,7 @@ class Request
             return $_POST[$key];
         }
 
-        return (!$key && isset($_POST)) ? $_POST : null;
+        return (! $key && isset($_POST)) ? $_POST : null;
     }
 
     /**
@@ -69,7 +68,7 @@ class Request
             return $_FILES[$key];
         }
 
-        return (!$key && isset($_FILES)) ? $_FILES : null;
+        return (! $key && isset($_FILES)) ? $_FILES : null;
     }
 
     /**
@@ -89,7 +88,7 @@ class Request
             return $_PUT[$key];
         }
 
-        return (!$key && isset($_PUT)) ? $_PUT : null;
+        return (! $key && isset($_PUT)) ? $_PUT : null;
     }
 
     /**
@@ -113,7 +112,7 @@ class Request
      *
      * @since 1.0.0
      *
-     * @return boolean
+     * @return bool
      */
     public static function isGet()
     {
@@ -125,7 +124,7 @@ class Request
      *
      * @since 1.0.0
      *
-     * @return boolean
+     * @return bool
      */
     public static function isPost()
     {
@@ -137,7 +136,7 @@ class Request
      *
      * @since 1.0.0
      *
-     * @return boolean
+     * @return bool
      */
     public static function isPut()
     {
@@ -149,7 +148,7 @@ class Request
      *
      * @since 1.0.0
      *
-     * @return boolean
+     * @return bool
      */
     public static function isDelete()
     {
@@ -161,11 +160,11 @@ class Request
      *
      * @since 1.0.0
      *
-     * @return boolean
+     * @return bool
      */
     public static function isAjax()
     {
-        if (!empty($http = $_SERVER['HTTP_X_REQUESTED_WITH'])) {
+        if (! empty($http = $_SERVER['HTTP_X_REQUESTED_WITH'])) {
             return strtolower($http) === 'xmlhttprequest';
         }
 

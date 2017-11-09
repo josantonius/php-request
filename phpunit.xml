@@ -6,17 +6,16 @@
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
-         strict="true"
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="false"
          bootstrap="vendor/autoload.php">
-         
+
     <php>
         <server name='REQUEST_METHOD' value='POST' />
         <server name='HTTP_X_REQUESTED_WITH' value='xmlhttprequest' />
     </php>
-
+    
     <testsuites>
         <testsuite name="Test Suite">
             <directory>tests</directory>
@@ -28,4 +27,5 @@
             <directory>src</directory>
         </whitelist>
     </filter>
+
 </phpunit>
