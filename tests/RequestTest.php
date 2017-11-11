@@ -59,9 +59,10 @@ class RequestTest extends TestCase
      */
     public function testGet()
     {
+        $request = $this->Request;
         $_GET = ['test' => 'value', 'test-2' => 1];
 
-        $this->assertInternalType('array', $this->Request->get());
+        $this->assertInternalType('array', $request::get());
     }
 
     /**
@@ -71,7 +72,9 @@ class RequestTest extends TestCase
      */
     public function testGetSpecificKey()
     {
-        $this->assertContains('value', $this->Request->get('test'));
+        $request = $this->Request;
+
+        $this->assertContains('value', $request::get('test'));
     }
 
     /**
@@ -81,9 +84,10 @@ class RequestTest extends TestCase
      */
     public function testGetSpecificKeyError()
     {
+        $request = $this->Request;
         unset($_GET);
 
-        $this->assertNull($this->Request->get('?'));
+        $this->assertNull($request::get('?'));
     }
 
     /**
@@ -93,7 +97,9 @@ class RequestTest extends TestCase
      */
     public function testGetError()
     {
-        $this->assertNull($this->Request->get());
+        $request = $this->Request;
+
+        $this->assertNull($request::get());
     }
 
     /**
@@ -104,8 +110,9 @@ class RequestTest extends TestCase
     public function testPost()
     {
         $_POST = ['test' => 'value', 'test-2' => 1];
+        $request = $this->Request;
 
-        $this->assertInternalType('array', $this->Request->post());
+        $this->assertInternalType('array', $request::post());
     }
 
     /**
@@ -115,7 +122,9 @@ class RequestTest extends TestCase
      */
     public function testPostSpecificKey()
     {
-        $this->assertContains('value', $this->Request->post('test'));
+        $request = $this->Request;
+
+        $this->assertContains('value', $request::post('test'));
     }
 
     /**
@@ -125,9 +134,10 @@ class RequestTest extends TestCase
      */
     public function testPostSpecificKeyError()
     {
+        $request = $this->Request;
         unset($_POST);
 
-        $this->assertNull($this->Request->post('?'));
+        $this->assertNull($request::post('?'));
     }
 
     /**
@@ -137,7 +147,9 @@ class RequestTest extends TestCase
      */
     public function testPostError()
     {
-        $this->assertNull($this->Request->post());
+        $request = $this->Request;
+
+        $this->assertNull($request::post());
     }
 
     /**
@@ -147,9 +159,10 @@ class RequestTest extends TestCase
      */
     public function testFiles()
     {
+        $request = $this->Request;
         $_FILES = ['test' => 'value', 'test-2' => 1];
 
-        $this->assertInternalType('array', $this->Request->files());
+        $this->assertInternalType('array', $request::files());
     }
 
     /**
@@ -159,7 +172,9 @@ class RequestTest extends TestCase
      */
     public function testFilesSpecificKey()
     {
-        $this->assertContains('value', $this->Request->files('test'));
+        $request = $this->Request;
+
+        $this->assertContains('value', $request::files('test'));
     }
 
     /**
@@ -169,9 +184,10 @@ class RequestTest extends TestCase
      */
     public function testFilesSpecificKeyError()
     {
+        $request = $this->Request;
         unset($_FILES);
 
-        $this->assertNull($this->Request->files('?'));
+        $this->assertNull($request::files('?'));
     }
 
     /**
@@ -181,7 +197,9 @@ class RequestTest extends TestCase
      */
     public function testFilesError()
     {
-        $this->assertNull($this->Request->files());
+        $request = $this->Request;
+
+        $this->assertNull($request::files());
     }
 
     /**
@@ -191,7 +209,9 @@ class RequestTest extends TestCase
      */
     public function testPutSpecificKeyError()
     {
-        $this->assertNull($this->Request->put('?'));
+        $request = $this->Request;
+
+        $this->assertNull($request::put('?'));
     }
 
     /**
@@ -201,7 +221,9 @@ class RequestTest extends TestCase
      */
     public function testPutError()
     {
-        $this->assertCount(0, $this->Request->put());
+        $request = $this->Request;
+
+        $this->assertCount(0, $request::put());
     }
 
     /**
@@ -211,7 +233,9 @@ class RequestTest extends TestCase
      */
     public function testDelSpecificKeyError()
     {
-        $this->assertNull($this->Request->del('?'));
+        $request = $this->Request;
+
+        $this->assertNull($request::del('?'));
     }
 
     /**
@@ -221,7 +245,9 @@ class RequestTest extends TestCase
      */
     public function testIsGet()
     {
-        $this->assertFalse($this->Request->isGet());
+        $request = $this->Request;
+
+        $this->assertFalse($request::isGet());
     }
 
     /**
@@ -231,7 +257,9 @@ class RequestTest extends TestCase
      */
     public function testIsPost()
     {
-        $this->assertTrue($this->Request->isPost());
+        $request = $this->Request;
+
+        $this->assertTrue($request::isPost());
     }
 
     /**
@@ -241,7 +269,9 @@ class RequestTest extends TestCase
      */
     public function testIsPut()
     {
-        $this->assertFalse($this->Request->isPut());
+        $request = $this->Request;
+
+        $this->assertFalse($request::isPut());
     }
 
     /**
@@ -251,7 +281,9 @@ class RequestTest extends TestCase
      */
     public function testIsDelete()
     {
-        $this->assertFalse($this->Request->isDelete());
+        $request = $this->Request;
+
+        $this->assertFalse($request::isDelete());
     }
 
     /**
@@ -261,7 +293,9 @@ class RequestTest extends TestCase
      */
     public function testIsNotDelete()
     {
-        $this->assertFalse($this->Request->isDelete());
+        $request = $this->Request;
+
+        $this->assertFalse($request::isDelete());
     }
 
     /**
@@ -271,6 +305,8 @@ class RequestTest extends TestCase
      */
     public function testIsAjax()
     {
-        $this->assertTrue($this->Request->isAjax());
+        $request = $this->Request;
+
+        $this->assertTrue($request::isAjax());
     }
 }
