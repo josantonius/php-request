@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.1.6 - 2017-11-13
+
+* Set the correct `phpcbf` fix command in `composer.json`.
+
+* Set static methods should in tests class. Use `::` instead of `->`.
+
+* Using isset instead empty to make the code readable.
+
 ## 1.1.5 - 2017-11-09
 
 * Implemented `PHP Mess Detector` to detect inconsistencies in code styles.
