@@ -164,8 +164,8 @@ class Request
      */
     public static function isAjax()
     {
-        if (! empty($http = $_SERVER['HTTP_X_REQUESTED_WITH'])) {
-            return strtolower($http) === 'xmlhttprequest';
+        if (isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
+            return strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
         }
 
         return false;
