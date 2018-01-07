@@ -3,7 +3,7 @@
  * PHP library for handling requests.
  *
  * @author    Josantonius <hello@josantonius.com>
- * @copyright 2017 (c) Josantonius - PHP-Request
+ * @copyright 2017 - 2018 (c) Josantonius - PHP-Request
  * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
  * @link      https://github.com/Josantonius/PHP-Request
  * @since     1.1.3
@@ -15,8 +15,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Tests class for Request library.
- *
- * @since 1.1.3
  */
 class RequestTest extends TestCase
 {
@@ -48,14 +46,11 @@ class RequestTest extends TestCase
      */
     public function testIsInstanceOfRequest()
     {
-        $actual = $this->Request;
-        $this->assertInstanceOf('Josantonius\Request\Request', $actual);
+        $this->assertInstanceOf('Josantonius\Request\Request', $this->Request);
     }
 
     /**
      * Access to all GET parameters.
-     *
-     * @since 1.1.3
      */
     public function testGet()
     {
@@ -67,8 +62,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to GET specific key parameter.
-     *
-     * @since 1.1.3
      */
     public function testGetSpecificKey()
     {
@@ -79,8 +72,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to GET specific key parameter when not exists.
-     *
-     * @since 1.1.3
      */
     public function testGetSpecificKeyError()
     {
@@ -92,8 +83,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to all GET parameters when not exists.
-     *
-     * @since 1.1.3
      */
     public function testGetError()
     {
@@ -104,8 +93,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to all POST parameters.
-     *
-     * @since 1.1.3
      */
     public function testPost()
     {
@@ -117,8 +104,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to POST specific key parameter.
-     *
-     * @since 1.1.3
      */
     public function testPostSpecificKey()
     {
@@ -129,8 +114,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to POST specific key parameter when not exists.
-     *
-     * @since 1.1.3
      */
     public function testPostSpecificKeyError()
     {
@@ -142,8 +125,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to all POST parameters when not exists.
-     *
-     * @since 1.1.3
      */
     public function testPostError()
     {
@@ -154,8 +135,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to all FILES parameters.
-     *
-     * @since 1.1.3
      */
     public function testFiles()
     {
@@ -167,8 +146,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to FILES specific key parameter.
-     *
-     * @since 1.1.3
      */
     public function testFilesSpecificKey()
     {
@@ -179,8 +156,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to FILES specific key parameter when not exists.
-     *
-     * @since 1.1.3
      */
     public function testFilesSpecificKeyError()
     {
@@ -192,8 +167,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to all FILES parameters when not exists.
-     *
-     * @since 1.1.3
      */
     public function testFilesError()
     {
@@ -204,8 +177,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to PUT specific key parameter when not exists.
-     *
-     * @since 1.1.3
      */
     public function testPutSpecificKeyError()
     {
@@ -216,8 +187,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to all PUT parameters when not exists.
-     *
-     * @since 1.1.3
      */
     public function testPutError()
     {
@@ -228,8 +197,6 @@ class RequestTest extends TestCase
 
     /**
      * Access to DEL specific key parameter when not exists.
-     *
-     * @since 1.1.3
      */
     public function testDelSpecificKeyError()
     {
@@ -240,8 +207,6 @@ class RequestTest extends TestCase
 
     /**
      * Check if it is a GET request.
-     *
-     * @since 1.1.3
      */
     public function testIsGet()
     {
@@ -252,8 +217,6 @@ class RequestTest extends TestCase
 
     /**
      * Check if it is a POST request.
-     *
-     * @since 1.1.3
      */
     public function testIsPost()
     {
@@ -264,8 +227,6 @@ class RequestTest extends TestCase
 
     /**
      * Check if it is a PUT request.
-     *
-     * @since 1.1.3
      */
     public function testIsPut()
     {
@@ -276,8 +237,6 @@ class RequestTest extends TestCase
 
     /**
      * Check if it is a DELETE request.
-     *
-     * @since 1.1.3
      */
     public function testIsDelete()
     {
@@ -288,8 +247,6 @@ class RequestTest extends TestCase
 
     /**
      * Check if it isn't a DELETE request.
-     *
-     * @since 1.1.3
      */
     public function testIsNotDelete()
     {
@@ -300,8 +257,6 @@ class RequestTest extends TestCase
 
     /**
      * Check if it is a Ajax request.
-     *
-     * @since 1.1.3
      */
     public function testIsAjax()
     {

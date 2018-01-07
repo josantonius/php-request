@@ -3,7 +3,7 @@
  * PHP library for handling requests.
  *
  * @author    Josantonius <hello@josantonius.com>
- * @copyright 2017 (c) Josantonius - PHP-Request
+ * @copyright 2017 - 2018 (c) Josantonius - PHP-Request
  * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
  * @link      https://github.com/Josantonius/PHP-Request
  * @since     1.0.0
@@ -12,15 +12,11 @@ namespace Josantonius\Request;
 
 /**
  * Request handler.
- *
- * @since 1.0.0
  */
 class Request
 {
     /**
      * Secure access to GET parameters.
-     *
-     * @since 1.0.0
      *
      * @param string $key → request key
      *
@@ -38,8 +34,6 @@ class Request
     /**
      * Secure access to POST parameters.
      *
-     * @since 1.0.0
-     *
      * @param string $key → request key
      *
      * @return mixed|null → value or null
@@ -56,8 +50,6 @@ class Request
     /**
      * Secure access to FILES parameters.
      *
-     * @since 1.0.0
-     *
      * @param string $key → request key
      *
      * @return mixed|null → value or null
@@ -73,8 +65,6 @@ class Request
 
     /**
      * Secure access to PUT parameters.
-     *
-     * @since 1.0.0
      *
      * @param string $key → request key
      *
@@ -94,8 +84,6 @@ class Request
     /**
      * Secure access to DELETE parameters.
      *
-     * @since 1.0.0
-     *
      * @param string $key → request key
      *
      * @return mixed|null → value or null
@@ -110,8 +98,6 @@ class Request
     /**
      * Check if it is a GET request.
      *
-     * @since 1.0.0
-     *
      * @return bool
      */
     public static function isGet()
@@ -121,8 +107,6 @@ class Request
 
     /**
      * Check if it is a POST request.
-     *
-     * @since 1.0.0
      *
      * @return bool
      */
@@ -134,8 +118,6 @@ class Request
     /**
      * Check if it is a PUT request.
      *
-     * @since 1.0.0
-     *
      * @return bool
      */
     public static function isPut()
@@ -146,8 +128,6 @@ class Request
     /**
      * Check if it is a DELETE request.
      *
-     * @since 1.0.0
-     *
      * @return bool
      */
     public static function isDelete()
@@ -157,8 +137,6 @@ class Request
 
     /**
      * Check if it is a AJAX request.
-     *
-     * @since 1.0.0
      *
      * @return bool
      */
