@@ -88,11 +88,15 @@ class Request
      *
      * @return mixed|null → value or null
      */
-    public static function del($key)
+    public static function del($key = null)
     {
         parse_str(file_get_contents('php://input'), $_DEL);
+        
+        if (isset($_DEL[$key])) {
+            return $_DEL[$key];
+        }
 
-        return (isset($_DEL[$key])) ? $_DEL[$key] : null;
+        return (! $key && isset($_DEL)) ? $_DEL : null;
     }
 
     /**
