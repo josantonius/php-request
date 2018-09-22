@@ -320,9 +320,9 @@ If you would like to help, please take a look at the list of
 
 **Thank you to all the people who already contributed to this project!**
 
-[<img alt="peter279k" src="https://avatars2.githubusercontent.com/u/9021747?v=4&s=117" height="117" width="117">](https://github.com/peter279k) |
-:---:|
-[peter279k](https://github.com/peter279k)|
+[<img alt="peter279k" src="https://avatars2.githubusercontent.com/u/9021747?v=4&s=117" height="117" width="117">](https://github.com/peter279k)|[<img alt="Mahdrentys" src="https://avatars2.githubusercontent.com/u/40216477?v=4&s=117" height="117" width="117">](https://github.com/Mahdrentys)|
+:---:|:---:|
+[peter279k](https://github.com/peter279k)| [Mahdrentys](https://github.com/Mahdrentys)|
 
 ## Repository
 
