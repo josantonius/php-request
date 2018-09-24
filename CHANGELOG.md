@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2.0.0 - 2018-09-22
+
+* The library was completely refactored without compatibility with previous versions and only compatible with PHP versions equal to or greater than 7.0.
+
+* Data collection on PUT and DELETE requests was improved depending on the type of content of the request.
+
+* Now, when obtaining values, the expected data type must be specified. It will be possible to set a default value when the data type does not match the expected one.
+
+* By obtaining the complete arrangement of the data received in the request, it will be possible to specify the type of data for each key.
+
 ## 1.1.7 - 2018-01-07
 
 * The tests were fixed.

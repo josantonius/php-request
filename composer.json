@@ -31,7 +31,8 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "php": "^5.6 || ^7.0"
+        "php": "^7.0",
+        "josantonius/validate": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7 || ^6.0",
@@ -55,6 +56,7 @@
         }
     },
     "scripts": {
+        "server": "gnome-terminal -e 'php -S localhost:8000 -t tests/'",
         "phpunit": "vendor/bin/phpunit --colors=always;",
         "phpcs": "vendor/bin/phpcs --standard=phpcs.xml $(find . -name '*.php');",
         "phpmd": "vendor/bin/phpmd src,tests text ./phpmd.xml",
@@ -63,6 +65,8 @@
             "vendor/bin/phpcbf src tests"
         ],
         "tests": [
+            "@server",
+            "sleep 3",
             "clear",
             "@phpmd",
             "@phpcs",

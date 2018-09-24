@@ -14,6 +14,8 @@
     <php>
         <server name='REQUEST_METHOD' value='POST' />
         <server name='HTTP_X_REQUESTED_WITH' value='xmlhttprequest' />
+        <server name='SERVER_NAME' value='localhost' />
+        <server name='SERVER_PORT' value='8000' />
     </php>
     
     <testsuites>

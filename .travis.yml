@@ -16,7 +16,6 @@ git:
   depth: 5
 
 php:
-  - 5.6
   - 7.0
   - 7.1
   - 7.2
@@ -38,6 +37,7 @@ before_script:
   - travis_retry composer install --no-interaction --prefer-source --dev
 
 script:
+  - gnome-terminal -e 'php -S localhost:8000 -t tests/'
   - phpunit
   - |
     if [[ "$PHPCS" ]] ; then
