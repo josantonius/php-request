@@ -24,7 +24,7 @@ PHP library for handling requests.
 
 ## Requirements
 
-This library is supported by **PHP versions 7.0** or higher and is compatible with **HHVM versions 3.0** or higher.
+This library is supported by **PHP versions 7.0** or higher.
 
 **IMPORTANT**: Version 2.x does not support version [1.x](https://github.com/Josantonius/php-request/tree/1.1.7) of this library. 
 

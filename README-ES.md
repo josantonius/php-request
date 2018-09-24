@@ -24,7 +24,7 @@ Biblioteca PHP para manejo de peticiones.
 
 ## Requisitos
 
-Esta biblioteca es soportada por versiones de **PHP 7.0** o superiores y es compatible con versiones de **HHVM 3.0** o superiores.
+Esta biblioteca es soportada por versiones de **PHP 7.0** o superiores.
 
 **IMPORTANTE**: La versión 2.x no es compatible con la versión [1.x](https://github.com/Josantonius/php-request/tree/1.1.7) de esta biblioteca. 
 
