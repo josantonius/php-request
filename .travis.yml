@@ -31,11 +31,7 @@ matrix:
   allow_failures:
     - php: nightly
 
-before_install:
-    - sudo apt-get install gnome-terminal
-
 before_script:
-  - gnome-terminal -e 'php -S localhost:8000 -t tests/'
   - export PATH="./vendor/bin:$PATH"
   - travis_retry composer self-update
   - travis_retry composer install --no-interaction --prefer-source --dev
