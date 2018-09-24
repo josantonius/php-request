@@ -106,7 +106,7 @@ class Request
      * @param array $filters → object with data type for each key
      * @param mixed $default → default value for non-existent or incorrect keys
      */
-    public function asObject(array $filters = [], $default = null) : object
+    public function asObject(array $filters = [], $default = null) : stdClass
     {
         $object = Validate::asObject($this->params[$this->key] ?? $this->params, (object) []);
 
