@@ -32,7 +32,6 @@ matrix:
     - php: nightly
 
 before_install:
-    - sudo apt-get update
     - sudo apt-get install gnome-terminal
 
 before_script:
