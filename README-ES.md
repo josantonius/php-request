@@ -32,21 +32,11 @@ La mejor forma de instalar esta extensión es a través de [Composer](http://get
 
 Para instalar **PHP Request library**, simplemente escribe:
 
-    $ composer require Josantonius/Request
+    $ composer require Josantonius/Request "1.7"
 
 El comando anterior sólo instalará los archivos necesarios, si prefieres **descargar todo el código fuente** puedes utilizar:
 
-    $ composer require Josantonius/Request --prefer-source
-
-También puedes **clonar el repositorio** completo con Git:
-
-  $ git clone https://github.com/Josantonius/PHP-Request.git
-
-O **instalarlo manualmente**:
-
-[Descargar Request.php](https://raw.githubusercontent.com/Josantonius/PHP-Request/master/src/Request.php):
-
-    $ wget https://raw.githubusercontent.com/Josantonius/PHP-Request/master/src/Request.php
+    $ composer require Josantonius/Request "1.7" --prefer-source
 
 ## Métodos disponibles
 
@@ -158,14 +148,6 @@ Para utilizar esta biblioteca con **Composer**:
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
-
-use Josantonius\Request\Request;
-```
-
-Si la instalaste **manualmente**, utiliza:
-
-```php
-require_once __DIR__ . '/Request.php';
 
 use Josantonius\Request\Request;
 ```
