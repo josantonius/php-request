@@ -37,12 +37,12 @@ before_script:
   - travis_retry composer install --no-interaction --prefer-source --dev
 
 script:
-  - phpunit
   - |
     if [[ "$PHPCS" ]] ; then
       phpcs --standard=phpcs.xml $(find . -name '*.php')
       phpmd src,tests text ./phpmd.xml
     fi
+  - phpunit
 
 after_success:
  - bash <(curl -s https://codecov.io/bash)
