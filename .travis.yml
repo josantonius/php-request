@@ -37,6 +37,7 @@ before_script:
   - travis_retry composer install --no-interaction --prefer-source --dev
 
 script:
+  - php -S localhost:8000 -t tests/ &
   - |
     if [[ "$PHPCS" ]] ; then
       phpcs --standard=phpcs.xml $(find . -name '*.php')
