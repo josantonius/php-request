@@ -56,7 +56,7 @@
         }
     },
     "scripts": {
-        "server": "gnome-terminal -e 'php -S localhost:8000 -t tests/'",
+        "server": "gnome-terminal -e 'php -S localhost:9000 -t tests/'",
         "phpunit": "vendor/bin/phpunit --colors=always;",
         "phpcs": "vendor/bin/phpcs --standard=phpcs.xml $(find . -name '*.php');",
         "phpmd": "vendor/bin/phpmd src,tests text ./phpmd.xml",
