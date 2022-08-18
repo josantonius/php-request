@@ -1,6 +1,6 @@
 {
-    "name":        "josantonius/request",
-    "type":        "library",
+    "name": "josantonius/request",
+    "type": "library",
     "description": "PHP library for handling requests.",
     "keywords": [
         "Request",
@@ -15,15 +15,15 @@
     "license": "MIT",
     "authors": [
         {
-            "name":     "Josantonius",
-            "email":    "hello@josantonius.com",
+            "name": "Josantonius",
+            "email": "hello@josantonius.com",
             "homepage": "https://josantonius.com",
-            "role":     "Developer"
+            "role": "Developer"
         }
     ],
     "support": {
         "issues": "https://github.com/josantonius/php-request/issues",
-        "forum":  "http://stackoverflow.com/tags/josantonius/php-request",
+        "forum": "http://stackoverflow.com/tags/josantonius/php-request",
         "source": "https://github.com/josantonius/php-request"
     },
     "config": {
@@ -31,7 +31,7 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "php": "^7.0",
+        "php": "^7.4",
         "josantonius/validate": "^1.0"
     },
     "require-dev": {

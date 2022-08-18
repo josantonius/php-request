@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.0.1 - 2022-08-18
+
+The repository was archived.
+
 ## 2.0.0 - 2018-09-22
 
 * The library was completely refactored without compatibility with previous versions and only compatible with PHP versions equal to or greater than 7.0.
@@ -59,7 +63,7 @@
 * Unit tests supported by `PHPUnit` were added.
 
 * The repository was synchronized with Travis CI to implement continuous integration.
- 
+
 * Added `Request/src/bootstrap.php` file
 
 * Added `Request/tests/bootstrap.php` file.
@@ -159,4 +163,3 @@
 * Added `Josantonius\Request\Tests\RequestTest::testIsPut()` method.
 * Added `Josantonius\Request\Tests\RequestTest::testIsDelete()` method.
 * Added `Josantonius\Request\Tests\RequestTest::testIsAjax()` method.
-

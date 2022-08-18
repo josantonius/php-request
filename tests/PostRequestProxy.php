@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHP library for handling requests.
  *
@@ -8,6 +9,7 @@
  * @link      https://github.com/Josantonius/PHP-Request
  * @since     2.0.0
  */
+
 namespace Josantonius\Request\Test;
 
 require '../vendor/autoload.php';

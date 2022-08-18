@@ -1,10 +1,11 @@
 # PHP Request library
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/request/v/stable)](https://packagist.org/packages/josantonius/request) [![Latest Unstable Version](https://poser.pugx.org/josantonius/request/v/unstable)](https://packagist.org/packages/josantonius/request) [![License](https://poser.pugx.org/josantonius/request/license)](LICENSE) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/aa5b98dbbc5846399bb994318dce3c88)](https://www.codacy.com/app/Josantonius/php-request?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Josantonius/php-request&amp;utm_campaign=Badge_Grade) [![Total Downloads](https://poser.pugx.org/josantonius/request/downloads)](https://packagist.org/packages/josantonius/request) [![Travis](https://travis-ci.org/Josantonius/php-request.svg)](https://travis-ci.org/Josantonius/php-request) [![PSR2](https://img.shields.io/badge/PSR-2-1abc9c.svg)](http://www.php-fig.org/psr/psr-2/) [![PSR4](https://img.shields.io/badge/PSR-4-9b59b6.svg)](http://www.php-fig.org/psr/psr-4/) [![CodeCov](https://codecov.io/gh/Josantonius/php-request/branch/master/graph/badge.svg)](https://codecov.io/gh/Josantonius/php-request)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/request/v/stable)](https://packagist.org/packages/josantonius/request)
+[![License](https://poser.pugx.org/josantonius/request/license)](LICENSE)
 
 [Versión en español](README-ES.md)
 
-PHP library for handling requests. 
+PHP library for handling requests.
 
 ---
 
@@ -14,19 +15,16 @@ PHP library for handling requests.
 - [Quick Start](#quick-start)
 - [Usage](#usage)
 - [Tests](#tests)
-- [TODO](#-todo)
-- [Contribute](#contribute)
-- [Repository](#repository)
+- [Sponsor](#Sponsor)
 - [License](#license)
-- [Copyright](#copyright)
 
 ---
 
 ## Requirements
 
-This library is supported by **PHP versions 7.0** or higher.
+This library is supported by PHP 7.4.
 
-**IMPORTANT**: Version 2.x does not support version [1.x](https://github.com/Josantonius/php-request/tree/1.1.7) of this library. 
+**IMPORTANT**: Version 2.x does not support version [1.x](https://github.com/Josantonius/php-request/tree/1.1.7) of this library.
 
 **IMPORTANT**: Version [1.x](https://github.com/Josantonius/php-request/tree/1.1.7) has been considered obsolete, but if you want to use it for 5.6 versions of PHP you can have a look at its [documentation](https://github.com/Josantonius/php-request/tree/1.1.7).
 
@@ -36,29 +34,29 @@ The preferred way to install this extension is through [Composer](http://getcomp
 
 To install **PHP Request library**, simply:
 
-    $ composer require josantonius/request
+    composer require josantonius/request
 
 The previous command will only install the necessary files, if you prefer to **download the entire source code** you can use:
 
-    $ composer require josantonius/request --prefer-source
+    composer require josantonius/request --prefer-source
 
 You can also **clone the complete repository** with Git:
 
-  $ git clone https://github.com/Josantonius/php-request.git
+  $ git clone <https://github.com/Josantonius/php-request.git>
 
 Or **install it manually**:
 
 Download [Request.php](https://raw.githubusercontent.com/Josantonius/php-request/master/src/Request.php) and [Validate.php](https://raw.githubusercontent.com/Josantonius/php-validate/master/src/Validate.php):
 
-    $ wget https://raw.githubusercontent.com/Josantonius/php-request/master/src/Request.php
+    wget https://raw.githubusercontent.com/Josantonius/php-request/master/src/Request.php
 
-    $ wget https://raw.githubusercontent.com/Josantonius/php-validate/master/src/Validate.php
+    wget https://raw.githubusercontent.com/Josantonius/php-validate/master/src/Validate.php
 
 ## Available Methods
 
 Available methods in this library:
 
-### - Check if it's a GET request:
+### - Check if it's a GET request
 
 ```php
 Request::isGet();
@@ -66,7 +64,7 @@ Request::isGet();
 
 **# Return** (boolean)
 
-### - Check if it's a POST request:
+### - Check if it's a POST request
 
 ```php
 Request::isPost();
@@ -74,7 +72,7 @@ Request::isPost();
 
 **# Return** (boolean)
 
-### - Check if it's a PUT request:
+### - Check if it's a PUT request
 
 ```php
 Request::isPut();
@@ -82,7 +80,7 @@ Request::isPut();
 
 **# Return** (boolean)
 
-### - Check if it's a DELETE request:
+### - Check if it's a DELETE request
 
 ```php
 Request::isDelete();
@@ -90,7 +88,7 @@ Request::isDelete();
 
 **# Return** (boolean)
 
-### - Get request params.
+### - Get request params
 
 For PUT and DELETE requests, the content type will be checked to correctly obtain the data received in the request.
 
@@ -114,7 +112,7 @@ Request::input($type);
 
 **# Return** anonymous function that will return the Request object when it's called
 
-### - Data sanitation and return as array:
+### - Data sanitation and return as array
 
 ```php
 asArray($filters, $default);
@@ -127,7 +125,7 @@ asArray($filters, $default);
 
 **# Return** (array) → it will return an empty array in case of error
 
-### - Data sanitation and return as object:
+### - Data sanitation and return as object
 
 ```php
 asObject($filters, $default);
@@ -140,7 +138,7 @@ asObject($filters, $default);
 
 **# Return** (object) → it will return an empty object in case of error
 
-### - Data sanitation and return as JSON:
+### - Data sanitation and return as JSON
 
 ```php
 asJson($default);
@@ -152,7 +150,7 @@ asJson($default);
 
 **# Return** (mixed|null) → value, null or customized return value
 
-### - Data sanitation and return as string:
+### - Data sanitation and return as string
 
 ```php
 asString($default);
@@ -164,7 +162,7 @@ asString($default);
 
 **# Return** (mixed|null) → value, null or customized return value
 
-### - Data sanitation and return as integer:
+### - Data sanitation and return as integer
 
 ```php
 asInteger($default);
@@ -176,7 +174,7 @@ asInteger($default);
 
 **# Return** (mixed|null) → value, null or customized return value
 
-### - Data sanitation and return as float:
+### - Data sanitation and return as float
 
 ```php
 asFloat($default);
@@ -188,7 +186,7 @@ asFloat($default);
 
 **# Return** (mixed|null) → value, null or customized return value
 
-### - Data sanitation and return as boolean:
+### - Data sanitation and return as boolean
 
 ```php
 asBoolean($default);
@@ -200,7 +198,7 @@ asBoolean($default);
 
 **# Return** (mixed|null) → value, null or customized return value
 
-### - Data sanitation and return as IP address:
+### - Data sanitation and return as IP address
 
 ```php
 asIp($default);
@@ -212,7 +210,7 @@ asIp($default);
 
 **# Return** (mixed|null) → value, null or customized return value
 
-### - Data sanitation and return as URL:
+### - Data sanitation and return as URL
 
 ```php
 asUrl($default);
@@ -224,7 +222,7 @@ asUrl($default);
 
 **# Return** (mixed|null) → value, null or customized return value
 
-### - Data sanitation and return as email:
+### - Data sanitation and return as email
 
 ```php
 asEmail($default);
@@ -260,7 +258,7 @@ use Josantonius\Validate\Validate;
 
 For the examples it will be simulated that the following data is received in the request:
 
-### Example data received in the request:
+### Example data received in the request
 
 ```php
 'user_name' => 'John'
@@ -280,31 +278,31 @@ For the examples it will be simulated that the following data is received in the
 
 Example of use for this library:
 
-### - Check if it's a GET request:
+### - Check if it's a GET request
 
 ```php
 Request::isGet(); // true or false
 ```
 
-### - Check if it's a POST request:
+### - Check if it's a POST request
 
 ```php
 Request::isPost(); // true or false
 ```
 
-### - Check if it's a PUT request:
+### - Check if it's a PUT request
 
 ```php
 Request::isPut(); // true or false
 ```
 
-### - Check if it's a DELETE request:
+### - Check if it's a DELETE request
 
 ```php
 Request::isDelete(); // true or false
 ```
 
-### - Access to the parameters of the request.
+### - Access to the parameters of the request
 
 ```php
 $_GET = Request::input('GET');
@@ -318,9 +316,9 @@ $_DELETE = Request::input('DELETE');
 
 Returns an anonymous function that will return the Request object when it's called.
 
-### - As array:
+### - As array
 
-#### - Get and sanitize all data and return them as array:
+#### - Get and sanitize all data and return them as array
 
 ```php
 $array = $_GET()->asArray();
@@ -366,9 +364,9 @@ array(9) {
 */
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-#### - Obtain, sanitize all data and return them as array and filter each value according to the data type:
+#### - Obtain, sanitize all data and return them as array and filter each value according to the data type
 
 ```php
 $filters = [
@@ -394,9 +392,9 @@ var_dump($array['user_age']); // string(2) "35" (although an integer is received
 var_dump($array['user_age']); // NULL (doesn't exist, the default value is returned)
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-#### - Obtain, sanitize all data and return them as array, filter each value according to the data type and specify a value for each key when it's wrong:
+#### - Obtain, sanitize all data and return them as array, filter each value according to the data type and specify a value for each key when it's wrong
 
 ```php
 $filters = [
@@ -422,11 +420,11 @@ var_dump($array['is_active']); // bool(true)
 var_dump($array['is_online']); // string(0) "" (doesn't exist, the default value is returned)
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-### - As object:
+### - As object
 
-#### - Get and sanitize all data and return them as object:
+#### - Get and sanitize all data and return them as object
 
 ```php
 $object = $_GET()->asObject();
@@ -472,9 +470,9 @@ object(stdClass)#1 (9) {
 */
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-#### - Obtain, sanitize all data and return them as object and filter each value according to the data type:
+#### - Obtain, sanitize all data and return them as object and filter each value according to the data type
 
 ```php
 $filters = [
@@ -500,9 +498,9 @@ var_dump($object->user_age); // int(35)
 var_dump($object->user_age); // NULL (doesn't exist, the default value is returned)
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-#### - Obtain, sanitize all data and return them as object, filter each value according to the data type and specify a value for each key when it's wrong:
+#### - Obtain, sanitize all data and return them as object, filter each value according to the data type and specify a value for each key when it's wrong
 
 ```php
 $filters = [
@@ -531,11 +529,11 @@ var_dump($object->is_online); // bool(false) (doesn't exist, the default value i
 var_dump($object->is_member); // bool(false) (doesn't exist, the default value is returned)
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-### - As JSON:
+### - As JSON
 
-#### - Get and sanitize all data and return them as JSON:
+#### - Get and sanitize all data and return them as JSON
 
 ```php
 $json = $_GET()->asJson();
@@ -555,9 +553,9 @@ string(260) "{"user_name":"John","user_surname":"Doe","user_age":35,"user_rating
 */
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-#### - Get specific key value, sanitize data and return them as JSON:
+#### - Get specific key value, sanitize data and return them as JSON
 
 ```php
 $json = $_GET('user_address')->asJson();
@@ -583,11 +581,11 @@ $json = $_DELETE('user_address')->asJson([]);
 var_dump($json); // string(2) "[]" (doesn't exist, the default value is returned)
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-### - As string:
+### - As string
 
-#### - Get specific key value, sanitize data and return them as string:
+#### - Get specific key value, sanitize data and return them as string
 
 ```php
 $string = $_GET('user_age')->asString();
@@ -613,11 +611,11 @@ $string = $_DELETE('user_address')->asString('unknown');
 var_dump($string); // string(7) "unknown" (it's an array, the default value is returned)
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-### - As integer:
+### - As integer
 
-#### - Get specific key value, sanitize data and return them as integer:
+#### - Get specific key value, sanitize data and return them as integer
 
 ```php
 $integer = $_GET('user_age')->asInteger();
@@ -637,11 +635,11 @@ $integer = $_DELETE('user_rating')->asInteger(5);
 var_dump($integer); // int(5) (it's a float, the default value is returned)
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-### - As float:
+### - As float
 
-#### - Get specific key value, sanitize data and return them as float:
+#### - Get specific key value, sanitize data and return them as float
 
 ```php
 $float = $_GET('user_age')->asFloat();
@@ -667,11 +665,11 @@ $float = $_DELETE('user_name')->asFloat(5.5);
 var_dump($float); // float(5.5) (it's a string, the default value is returned)
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-### - As boolean:
+### - As boolean
 
-#### - Get specific key value, sanitize data and return them as boolean:
+#### - Get specific key value, sanitize data and return them as boolean
 
 ```php
 $_GET['is_active'] = true;
@@ -749,9 +747,9 @@ $boolean = $_DELETE('is_online')->asBoolean(false);
 var_dump($boolean); // bool(false) (doesn't exist, the default value is returned)
 ```
 
-### - As IP:
+### - As IP
 
-#### - Get specific key value, sanitize data and return them as IP:
+#### - Get specific key value, sanitize data and return them as IP
 
 ```php
 $ip = $_GET('user_ip')->asIp();
@@ -771,11 +769,13 @@ $ip = $_DELETE('user_name')->asIp("87.32.48.164");
 var_dump($ip); // string(12) "87.32.48.164" (it's not an IP, the default value is returned)
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-### - As URL:
+### - As URL
 
-#### - Get specific key value, sanitize data and return them as URL:
+filterRequest
+
+#### - Get specific key value, sanitize data and return them as URL
 
 ```php
 $url = $_GET('user_website')->asUrl();
@@ -795,11 +795,11 @@ $url = $_DELETE('user_name')->asUrl("http://www.site.com/");
 var_dump($url); // string(20) "http://www.site.com/" (it's not an URL, the default value is returned)
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-### - As email:
+### - As email
 
-#### - Get specific key value, sanitize data and return them as email:
+#### - Get specific key value, sanitize data and return them as email
 
 ```php
 $email = $_GET('user_website')->asEmail();
@@ -819,80 +819,43 @@ $email = $_DELETE('user_name')->asEmail("john@site.com");
 var_dump($email); // string(13) "john@site.com" (it's not an email, the default value is returned)
 ```
 
-* [Example data received in the request](#example-data-received-in-the-request)
+- [Example data received in the request](#example-data-received-in-the-request)
 
-## Tests 
+## Tests
 
 To run [tests](tests) you just need [composer](http://getcomposer.org/download/) and to execute the following:
 
-    $ git clone https://github.com/Josantonius/php-request.git
+    git clone https://github.com/Josantonius/php-request.git
     
-    $ cd php-request
+    cd php-request
 
-    $ composer install
+    composer install
 
 Run unit tests with [PHPUnit](https://phpunit.de/):
 
-    $ gnome-terminal -e 'php -S localhost:8000 -t tests/'
+    gnome-terminal -e 'php -S localhost:8000 -t tests/'
 
-    $ composer phpunit
+    composer phpunit
 
 Run [PSR2](http://www.php-fig.org/psr/psr-2/) code standard tests with [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer):
 
-    $ composer phpcs
+    composer phpcs
 
 Run [PHP Mess Detector](https://phpmd.org/) tests to detect inconsistencies in code style:
 
-    $ composer phpmd
+    composer phpmd
 
 Run all previous tests:
 
-    $ composer tests
+    composer tests
 
-## ☑ TODO
+## Sponsor
 
-- [ ] Add new feature.
-- [ ] Improve tests.
-- [ ] Improve documentation.
-- [ ] Refactor code for disabled code style rules. See [phpmd.xml](phpmd.xml) and [.php_cs.dist](.php_cs.dist).
-- [ ] Stop exclusion of test files in [.php_cs.dist](.php_cs.dist).
-- [ ] Change the `getParsedInput` method to public, create tests and document it.
-- [ ] Change the `getContentType` method to public, create tests and document it.
-- [ ] Change the `parseRaw` method to public, create tests and document it.
-
-## Contribute
-
-If you would like to help, please take a look at the list of
-[issues](https://github.com/Josantonius/php-request/issues) or the [To Do](#-todo) checklist.
-
-**Pull requests**
-
-* [Fork and clone](https://help.github.com/articles/fork-a-repo).
-* Run the command `composer install` to install the dependencies.
-  This will also install the [dev dependencies](https://getcomposer.org/doc/03-cli.md#install).
-* Run the command `composer fix` to excute code standard fixers.
-* Run the [tests](#tests).
-* Create a **branch**, **commit**, **push** and send me a
-  [pull request](https://help.github.com/articles/using-pull-requests).
-
-**Thank you to all the people who already contributed to this project!**
-
-[<img alt="peter279k" src="https://avatars2.githubusercontent.com/u/9021747?v=4&s=117" height="117" width="117">](https://github.com/peter279k)|[<img alt="Mahdrentys" src="https://avatars2.githubusercontent.com/u/40216477?v=4&s=117" height="117" width="117">](https://github.com/Mahdrentys)|
-:---:|:---:|
-[peter279k](https://github.com/peter279k)| [Mahdrentys](https://github.com/Mahdrentys)|
-
-## Repository
-
-The file structure from this repository was created with [PHP-Skeleton](https://github.com/Josantonius/PHP-Skeleton).
+If this project helps you to reduce your development time,
+[you can sponsor me](https://github.com/josantonius#sponsor) to support my open source work :blush:
 
 ## License
 
-This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file for more info.
+This repository is licensed under the [MIT License](LICENSE).
 
-## Copyright
-
-2017 - 2018 Josantonius, [josantonius.com](https://josantonius.com/)
-
-If you find it useful, let me know :wink:
-
-You can contact me on [Twitter](https://twitter.com/Josantonius) or through my [email](mailto:hello@josantonius.com).
+Copyright © 2017-2022, [Josantonius](https://github.com/josantonius#contact)
